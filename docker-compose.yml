@@ -1,0 +1,18 @@
+services:
+  nexus:
+    image: sonatype/nexus3:latest
+    ports:
+      - "8081:8081"
+      - "8082:8082"
+    volumes:
+      - nexus-data:/nexus-data
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+volumes:
+  nexus-data:
