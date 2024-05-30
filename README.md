@@ -6,7 +6,8 @@ docker tag myapp:latest 127.0.0.1:8082/repository/docker-hosted/myapp:latest
 docker login 127.0.0.1:8082
 docker push 127.0.0.1:8082/repository/docker-hosted/myapp:latest
 
-
+# Setting Port 8082
+Admin > Repo > Setting > docker-hosted > http fill 8082
 
 # สร้าง Cleanup Policy ใน Nexus:
 เข้าสู่ Nexus Repository Manager UI.
